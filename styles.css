@@ -495,6 +495,48 @@ textarea {
   color: var(--ink-light-muted);
 }
 
+.artifact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: var(--ink-dark-muted);
+}
+
+.artifact-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.artifact-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.52rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brass);
+}
+
+.artifact-list strong {
+  color: var(--ink-dark);
+}
+
+.artifact-slogan-quote {
+  margin: 0 0 0.85rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--brass);
+  background: var(--bg-stone);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--ink-dark);
+}
+
 .principles-strip {
   background: var(--bg-stone-card);
   border: 1px solid var(--border-stone);
