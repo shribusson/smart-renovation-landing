@@ -331,6 +331,31 @@ textarea {
   display: block;
 }
 
+.hero-photo-frame {
+  margin: 0 0 1.1rem;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #101319;
+}
+
+.hero-photo-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.hero-photo-frame figcaption {
+  padding: 0.58rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-light-muted);
+  border-top: 1px solid var(--border-dark);
+  background: rgba(13, 15, 18, 0.88);
+}
+
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -577,6 +602,33 @@ textarea {
 
 .tech-details-body div strong {
   color: var(--ink-dark);
+}
+
+.section-dark .tech-details {
+  margin-top: 1.5rem;
+  background: var(--bg-dark-elevated);
+  border-color: var(--border-dark);
+}
+
+.section-dark .tech-details summary {
+  color: var(--ink-light-muted);
+}
+
+.section-dark .tech-details-toggle {
+  color: var(--brass);
+}
+
+.section-dark .tech-details[open] summary {
+  border-bottom-color: var(--border-dark);
+  color: var(--ink-light);
+}
+
+.section-dark .tech-details-body {
+  color: var(--ink-light-muted);
+}
+
+.section-dark .tech-details-body div strong {
+  color: var(--ink-light);
 }
 
 /* Educational Comfort Guide */
@@ -1155,6 +1207,14 @@ input[type='range'] {
   color: var(--ink-light-muted);
 }
 
+.calc-scope-note {
+  margin: 0.6rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px dashed rgba(244, 241, 234, 0.16);
+  font-size: 0.79rem;
+  color: var(--ink-light);
+}
+
 .included-highlight {
   margin-top: 1.25rem;
   padding: 1.15rem;
@@ -1320,6 +1380,24 @@ input[type='range'] {
   color: var(--ink-light-muted);
 }
 
+.section-stone .process-step {
+  background: var(--bg-stone-card);
+  border-color: var(--border-stone);
+  color: var(--ink-dark);
+}
+
+.section-stone .step-num {
+  color: #8c6a32;
+}
+
+.section-stone .process-step h3 {
+  color: var(--ink-dark);
+}
+
+.section-stone .process-step p {
+  color: var(--ink-dark-muted);
+}
+
 /* FAQ */
 .faq-layout {
   display: grid;
@@ -1375,6 +1453,23 @@ input[type='range'] {
 
 .faq-content p {
   margin: 0;
+}
+
+.section-dark .faq-item {
+  background: var(--bg-dark-elevated);
+  border-color: var(--border-dark);
+}
+
+.section-dark .faq-trigger {
+  color: var(--ink-light);
+}
+
+.section-dark .faq-icon {
+  color: var(--brass);
+}
+
+.section-dark .faq-content {
+  color: var(--ink-light-muted);
 }
 
 /* Contact */
@@ -1468,6 +1563,65 @@ input[type='range'] {
 
 .form-status.is-error {
   color: #e67c73;
+}
+
+.section-contact.section-stone {
+  background: #ede7dc;
+  color: var(--ink-dark);
+  border-top: 1px solid var(--border-stone);
+}
+
+.section-contact.section-stone .contact-info h2 {
+  color: var(--ink-dark);
+}
+
+.section-contact.section-stone .contact-lead {
+  color: var(--ink-dark-muted);
+}
+
+.section-contact.section-stone .contact-guarantees div {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--border-stone);
+  border-left: 3px solid var(--brass);
+  border-radius: var(--radius-sm);
+}
+
+.section-contact.section-stone .contact-guarantees strong {
+  color: var(--ink-dark);
+}
+
+.section-contact.section-stone .contact-guarantees span {
+  color: var(--ink-dark-muted);
+}
+
+.section-contact.section-stone .lead-form {
+  background: #ffffff;
+  border-color: var(--border-stone);
+}
+
+.section-contact.section-stone .form-row label {
+  color: var(--ink-dark-muted);
+}
+
+.section-contact.section-stone .form-row input,
+.section-contact.section-stone .form-row textarea {
+  background: #faf8f4;
+  border-color: var(--border-stone);
+  color: var(--ink-dark);
+}
+
+.section-contact.section-stone .form-row input:focus,
+.section-contact.section-stone .form-row textarea:focus {
+  background: #ffffff;
+  border-color: var(--brass);
+}
+
+.section-contact.section-stone .form-status {
+  color: #8c6a32;
+}
+
+.section-contact.section-stone .form-status.is-error {
+  color: #a63d35;
 }
 
 /* Optional Company Spoiler */
