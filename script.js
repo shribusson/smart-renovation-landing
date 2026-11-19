@@ -354,4 +354,19 @@
       }
     });
   }
+
+  // Optional Company Info Spoiler
+  const companySpoiler = document.getElementById('companySpoiler');
+  const spoilerLabel = companySpoiler?.querySelector('.spoiler-toggle-label');
+  if (companySpoiler && spoilerLabel) {
+    companySpoiler.addEventListener('toggle', () => {
+      spoilerLabel.textContent = companySpoiler.open ? 'Свернуть' : 'Развернуть';
+    });
+
+    document.querySelectorAll('a[href="#about"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        companySpoiler.open = true;
+      });
+    });
+  }
 })();
