@@ -277,8 +277,12 @@
     }
 
     if (calcScopeNoteEl) {
+      const joined =
+        scopeParts.length > 1
+          ? `${scopeParts.slice(0, -1).join(', ')} и ${scopeParts[scopeParts.length - 1]}`
+          : scopeParts[0];
       calcScopeNoteEl.textContent = scopeParts.length
-        ? `Включает единый проект, черновую базу, ${scopeParts.join(' и ')}.`
+        ? `Включает единый проект, черновую базу, ${joined}.`
         : 'Включает единый проект, черновую подготовку и надёжную электрику.';
     }
 
