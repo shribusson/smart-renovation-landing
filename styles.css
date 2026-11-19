@@ -469,6 +469,66 @@ textarea {
   color: var(--ink-light-muted);
 }
 
+/* Industry Gold Standards Strip */
+.gold-standards-strip {
+  margin-top: 1.5rem;
+  background: var(--bg-stone-card);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.gold-standards-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.gold-standards-head h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--ink-dark);
+}
+
+.gold-standards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.9rem;
+}
+
+.gold-std-item {
+  border-top: 2px solid var(--brass);
+  padding-top: 0.75rem;
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.gold-std-code {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #8c6a32;
+  text-transform: uppercase;
+}
+
+.gold-std-item strong {
+  font-size: 0.92rem;
+  line-height: 1.25;
+  color: var(--ink-dark);
+}
+
+.gold-std-item p {
+  margin: 0;
+  font-size: 0.81rem;
+  line-height: 1.42;
+  color: var(--ink-dark-muted);
+}
+
 /* Comparison Matrix */
 .compare-table-wrap {
   border: 1px solid var(--border-dark);
@@ -1324,6 +1384,10 @@ input[type='range'] {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .gold-standards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1344,6 +1408,7 @@ input[type='range'] {
   }
 
   .offer-grid,
+  .gold-standards-grid,
   .company-grid,
   .company-values-list,
   .cases-grid,
