@@ -1458,3 +1458,56 @@ input[type='range'] {
     margin-bottom: 0.2rem;
   }
 }
+
+/* Variant Switcher Bar */
+.variant-bar {
+  background: #07080a;
+  border-bottom: 1px solid rgba(197, 160, 101, 0.28);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.45rem 0;
+}
+
+.variant-bar-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+}
+
+.variant-bar-label {
+  color: var(--ink-light-muted);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.variant-bar-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.variant-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(244, 241, 234, 0.14);
+  color: var(--ink-light-muted);
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.variant-link:hover {
+  border-color: var(--brass);
+  color: var(--ink-light);
+}
+
+.variant-link.is-current {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: #0d0f12;
+  font-weight: 600;
+}
+

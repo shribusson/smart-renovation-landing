@@ -315,8 +315,13 @@
       event.preventDefault();
       const name = document.getElementById('leadName').value.trim();
       const contact = document.getElementById('leadContact').value.trim();
-      const summary = document.getElementById('leadSummary').value.trim();
+      const rawSummary = document.getElementById('leadSummary').value.trim();
       const comment = document.getElementById('leadComment').value.trim();
+      const variantMatch = document.title.match(/^\[(v\d+)\]/);
+      const variantPrefix = variantMatch ? `[${variantMatch[1]}]` : '';
+      const summary = variantPrefix
+        ? `${variantPrefix} ${rawSummary || 'Без калькулятора'}`
+        : rawSummary;
 
       if (!name || !contact) {
         leadStatus.textContent = 'Пожалуйста, укажите имя и телефон или Telegram.';
