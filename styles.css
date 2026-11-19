@@ -406,6 +406,29 @@ textarea {
   display: block;
 }
 
+.hero-photo-frame {
+  margin: 0 0 1rem;
+  border: 1px solid var(--grid-line);
+  background: #ffffff;
+}
+
+.hero-photo-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.hero-photo-frame figcaption {
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-dark-muted);
+  border-top: 1px solid var(--grid-line);
+  background: #f8fafc;
+}
+
 /* Swiss Joined 1px Grids */
 .metrics-grid {
   display: grid;
