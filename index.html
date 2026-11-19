@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РАЦИО // Инженерный ремонт, эргономика и умный комфорт</title>
+  <meta
+    name="description"
+    content="Умный, эргономичный и экономически эффективный ремонт для тех, кто ценит глубину проработки деталей без переплаты за показной люкс."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="РАЦИО — на главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <rect x="1.5" y="1.5" width="23" height="23" stroke="currentColor" stroke-width="1.5" />
+            <path d="M1.5 13H13V24.5" stroke="#C5A065" stroke-width="1.5" />
+            <circle cx="18.5" cy="7.5" r="2" fill="#C5A065" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>РАЦИО</strong>
+          <span>ИНЖЕНЕРИЯ КОМФОРТА</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#artifacts">Артефакты</a>
+        <a href="#compare">Сравнение</a>
+        <a href="#anatomy">Узлы</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#calculator" class="btn btn-sm btn-brass">Рассчитать проект</a>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Открыть меню"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <div class="container mobile-nav-inner">
+        <a href="#artifacts">Артефакты компании</a>
+        <a href="#compare">Сравнение подходов</a>
+        <a href="#anatomy">Инженерная анатомия</a>
+        <a href="#calculator">Калькулятор бюджета</a>
+        <a href="#cases">Реализованные кейсы</a>
+        <a href="#process">Этапы работы</a>
+        <a href="#faq">Частые вопросы</a>
+        <a href="#contact" class="btn btn-brass btn-block">Обсудить проект</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="blueprint-grid" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            ИНЖЕНЕРНЫЙ РЕМОНТ • ЭРГОНОМИКА • РАЦИОНАЛЬНЫЙ БЮДЖЕТ
+          </div>
+
+          <h1>Глубина проработки деталей без переплаты за показной люкс</h1>
+
+          <p class="hero-lead">
+            Создаём технологичные, эргономичные и тактильно безупречные пространства для тех, кто
+            разбирается в сути комфорта, ценит собственное время и инвестирует бюджет в реальный
+            ресурс жилья — тишину, микроклимат, свет и безотказную инженерию.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#calculator" class="btn btn-brass btn-lg">Рассчитать рациональный бюджет</a>
+            <a href="#anatomy" class="btn btn-ghost btn-lg">Изучить инженерный стандарт</a>
+          </div>
+        </div>
+
+        <aside class="hero-spec-card" aria-label="Инженерный стандарт в цифрах">
+          <div class="spec-header">
+            <span class="mono-label">STD // RATIONAL-ENG-2026</span>
+            <span class="spec-badge">SPECIFIED</span>
+          </div>
+          <div class="blueprint-diagram" aria-hidden="true">
+            <svg viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="344" height="130" stroke="rgba(244,241,234,0.16)" stroke-dasharray="4 4" />
+              <path d="M24 30H210V92H336" stroke="#C5A065" stroke-width="1.5" />
+              <path d="M24 120H140V60H336" stroke="rgba(244,241,234,0.4)" stroke-width="1.2" />
+              <circle cx="210" cy="92" r="4" fill="#C5A065" />
+              <circle cx="140" cy="60" r="4" fill="#F4F1EA" />
+              <rect x="260" y="26" width="62" height="26" stroke="#C5A065" stroke-width="1" />
+              <text x="270" y="43" fill="#C5A065" font-family="IBM Plex Mono, monospace" font-size="10">0.5 мм</text>
+              <text x="26" y="23" fill="rgba(244,241,234,0.55)" font-family="IBM Plex Mono, monospace" font-size="9">АКУСТИЧЕСКИЙ КОНТУР -58 дБ</text>
+              <text x="150" y="132" fill="rgba(244,241,234,0.55)" font-family="IBM Plex Mono, monospace" font-size="9">SMART ROI +28% ЭФФЕКТИВНОСТИ</text>
+            </svg>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-value">20–35%</span>
+              <span class="metric-desc">экономия бюджета за счёт рационального инжиниринга без потери уровня комфорта</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">140+</span>
+              <span class="metric-desc">выверенных инженерных узлов и стандартов эргономики</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">100%</span>
+              <span class="metric-desc">фиксация сметы и сроков в договоре до выхода на объект</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">51%</span>
+              <span class="metric-desc">целевая доля рынка нашего стандарта рационального ремонта</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- COMPANY ARTIFACTS SECTION -->
+    <section class="section section-stone" id="artifacts">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">01 // АРТЕФАКТЫ КОМПАНИИ</span>
+          <h2>Фундамент нашего подхода</h2>
+          <p class="section-subtitle">
+            Мы строим не просто ремонты, а воспроизводимую систему качества, где каждое решение
+            проверено на эргономику, ресурсность и экономическую целесообразность.
+          </p>
+        </div>
+
+        <div class="artifacts-grid">
+          <article class="artifact-card">
+            <div class="artifact-meta">
+              <span class="mono-index">АРТЕФАКТ 01</span>
+              <span class="artifact-label">Миссия</span>
+            </div>
+            <h3>Безупречная инженерия для тех, кто видит глубину</h3>
+            <p>
+              Создавать технологичные, эргономичные и тактильно безупречные жилые пространства для
+              обеспеченных людей, которые способны оценить глубину проработки деталей, ценят своё
+              время и выбирают подлинный комфорт вместо показной роскоши.
+            </p>
+          </article>
+
+          <article class="artifact-card artifact-card-featured">
+            <div class="artifact-meta">
+              <span class="mono-index">АРТЕФАКТ 02</span>
+              <span class="artifact-label">Философия</span>
+            </div>
+            <h3>Рациональный перфекционизм</h3>
+            <p>
+              Мы не пытаемся использовать самое дорогое оборудование, избыточные технологии или
+              усложнённые подходы ради раздувания сметы. Мы инвестируем бюджет туда, где он даёт
+              ощутимый прирост качества жизни каждый день — в комфорт, рациональность и экономичность.
+            </p>
+          </article>
+
+          <article class="artifact-card">
+            <div class="artifact-meta">
+              <span class="mono-index">АРТЕФАКТ 03</span>
+              <span class="artifact-label">Стратегическая цель</span>
+            </div>
+            <h3>Стандарт для 51% рынка</h3>
+            <p>
+              Стать передовой компанией в своей области и занять не менее 51% рынка современного
+              инженерного ремонта — за счёт стандартизации лучших технических узлов, прозрачной
+              экономики и предсказуемого результата.
+            </p>
+          </article>
+        </div>
+
+        <div class="principles-strip">
+          <div class="principles-header">
+            <span class="mono-tag-dark">5 ИНЖЕНЕРНЫХ ПРИНЦИПОВ</span>
+            <h3>Как философия работает на каждом объекте</h3>
+          </div>
+          <div class="principles-list">
+            <div class="principle-item">
+              <span class="principle-num">01</span>
+              <h4>Эргономика первичного сценария</h4>
+              <p>Планировка, высоты розеток, траектории движения и хранение проектируются под ваши реальные привычки с точностью до миллиметра.</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">02</span>
+              <h4>Прагматичный Smart Home</h4>
+              <p>Свет, климат, шторы и защита от протечек на надёжной промышленной автоматике без наценки x3 за закрытые люкс-экосистемы.</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">03</span>
+              <h4>Глубина проработки узлов</h4>
+              <p>Теневые примыкания, бесшумная канализация, коллекторы с защитой от гидроударов и удобные скрытые ревизии.</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">04</span>
+              <h4>Экономическая эффективность</h4>
+              <p>Инженерный подбор комплектации экономит 20–35% бюджета по сравнению с классическим «дизайнерским премиумом».</p>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">05</span>
+              <h4>Прозрачность и дисциплина</h4>
+              <p>Фиксированная смета до старта работ, поэтапный технадзор и полный цифровой паспорт скрытых коммуникаций.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON MATRIX -->
+    <section class="section section-dark" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">02 // СРАВНЕНИЕ ПОДХОДОВ</span>
+          <h2>Показной премиум vs Рациональная инженерия</h2>
+          <p class="section-subtitle">
+            Почему два ремонта с одинаковым уровнем ежедневного комфорта могут отличаться в цене на миллионы рублей.
+          </p>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Критерий</th>
+                <th>Классический «показной премиум»</th>
+                <th class="col-highlight">Стандарт РАЦИО</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Критерий">Оборудование и технологии</td>
+                <td data-label="Классический «показной премиум»">Самые дорогие бренды ради статуса в спецификации, сложные проприетарные решения</td>
+                <td data-label="Стандарт РАЦИО" class="col-highlight">Промышленная надёжность и лучший КПД на каждый вложенный рубль</td>
+              </tr>
+              <tr>
+                <td data-label="Критерий">Бюджет и смета</td>
+                <td data-label="Классический «показной премиум»">Скрытые допработы и рост бюджета на 25–40% к концу ремонта</td>
+                <td data-label="Стандарт РАЦИО" class="col-highlight">Твёрдая смета до старта и целевая экономия 20–35% за счёт умной комплектации</td>
+              </tr>
+              <tr>
+                <td data-label="Критерий">Умный дом</td>
+                <td data-label="Классический «показной премиум»">Избыточные панели за сотни тысяч, которыми неудобно пользоваться без интегратора</td>
+                <td data-label="Стандарт РАЦИО" class="col-highlight">Естественные сценарии: локальное управление светом, климатом и шторами без облачной зависимости</td>
+              </tr>
+              <tr>
+                <td data-label="Критерий">Проработка деталей</td>
+                <td data-label="Классический «показной премиум»">Фокус на декоре и картинке для портфолио, компромиссы в скрытых узлах</td>
+                <td data-label="Стандарт РАЦИО" class="col-highlight">140+ выверенных примыканий, бесшумная инженерия, доступность обслуживания</td>
+              </tr>
+              <tr>
+                <td data-label="Критерий">Эксплуатация через 5 лет</td>
+                <td data-label="Классический «показной премиум»">Дорогой сервис, дефицитные запчасти, зависимость от одного подрядчика</td>
+                <td data-label="Стандарт РАЦИО" class="col-highlight">Модульность, паспорт всех коммуникаций, понятное и недорогое обслуживание</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ENGINEERING ANATOMY -->
+    <section class="section section-stone" id="anatomy">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">03 // АНАТОМИЯ ИНЖЕНЕРНОГО КОМФОРТА</span>
+          <h2>Что скрыто за идеальной геометрией стен</h2>
+          <p class="section-subtitle">
+            Выберите подсистему, чтобы увидеть типовую ошибку дорогих ремонтов и наше рациональное инженерное решение.
+          </p>
+        </div>
+
+        <div class="anatomy-tabs" role="tablist" aria-label="Подсистемы инженерного ремонта">
+          <button class="anatomy-tab is-active" type="button" role="tab" aria-selected="true" data-tab="smart">
+            01. Умный дом
+          </button>
+          <button class="anatomy-tab" type="button" role="tab" aria-selected="false" data-tab="ergonomics">
+            02. Эргономика
+          </button>
+          <button class="anatomy-tab" type="button" role="tab" aria-selected="false" data-tab="climate">
+            03. Климат и тишина
+          </button>
+          <button class="anatomy-tab" type="button" role="tab" aria-selected="false" data-tab="nodes">
+            04. Инженерные узлы
+          </button>
+          <button class="anatomy-tab" type="button" role="tab" aria-selected="false" data-tab="lighting">
+            05. Светодизайн
+          </button>
+        </div>
+
+        <div class="anatomy-panel" id="anatomyPanel" role="tabpanel">
+          <!-- Populated dynamically by script.js, with initial server-safe default content -->
+          <div class="anatomy-grid">
+            <div class="anatomy-cards">
+              <div class="anatomy-box anatomy-box-warn">
+                <span class="box-label">Обычный подход</span>
+                <h3 id="anatomyMistakeTitle">Переплата x3 за закрытую экосистему и десятки сценариев «для галочки»</h3>
+                <p id="anatomyMistakeText">
+                  В смету закладывают люксовые сенсорные панели на каждую стену и сложное серверное оборудование. В реальности 80% функций не используются, а замена одного элемента требует вызова узкого интегратора.
+                </p>
+              </div>
+              <div class="anatomy-box anatomy-box-ok">
+                <span class="box-label">Наше решение</span>
+                <h3 id="anatomySolutionTitle">Промышленная локальная автоматизация под реальные привычки</h3>
+                <p id="anatomySolutionText">
+                  Используем надёжные открытые шины и модульные контроллеры: мастер-выключатель при входе, автоматический ночной свет, управление климатом по датчикам CO₂ и перекрытие воды при протечке за 2 секунды.
+                </p>
+              </div>
+            </div>
+
+            <div class="anatomy-specs">
+              <div class="anatomy-roi">
+                <span class="mono-label">ЭКОНОМИЧЕСКИЙ И БЫТОВОЙ ЭФФЕКТ</span>
+                <p id="anatomyEffect">
+                  Экономия до 45% на оборудовании и монтаже по сравнению с люкс-интеграцией при мгновенном отклике и автономной работе без интернета.
+                </p>
+              </div>
+              <div class="anatomy-spec-list-wrap">
+                <span class="mono-label">ТЕХНИЧЕСКАЯ СПЕЦИФИКАЦИЯ УЗЛА</span>
+                <ul class="spec-list" id="anatomySpecs">
+                  <li>Локальный отказоустойчивый контроллер в щите без облачной зависимости</li>
+                  <li>Резервное управление светом на физических клавишах</li>
+                  <li>Проводные датчики протечки с электроприводами шаровых кранов</li>
+                  <li>Сценарии «Утро / Работа / Кино / Уход из дома»</li>
+                  <li>Полная схема щита и резервные линии в техпаспорте объекта</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE BUDGET & RATIONAL SAVINGS CALCULATOR -->
+    <section class="section section-dark" id="calculator">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">04 // КАЛЬКУЛЯТОР РАЦИОНАЛЬНОГО БЮДЖЕТА</span>
+          <h2>Оцените бюджет и прямую экономию на инжиниринге</h2>
+          <p class="section-subtitle">
+            Расчёт показывает ориентировочную стоимость реализации «под ключ» и объём средств, который сохраняется за счёт отказа от избыточных решений.
+          </p>
+        </div>
+
+        <div class="calc-layout">
+          <form class="calc-controls" id="calculatorForm" onsubmit="return false;">
+            <div class="control-group">
+              <div class="control-head">
+                <label for="areaRange">Площадь объекта</label>
+                <span class="range-output" id="areaOutput">95 м²</span>
+              </div>
+              <input type="range" id="areaRange" min="40" max="250" step="1" value="95" />
+              <div class="range-scale">
+                <span>40 м²</span>
+                <span>145 м²</span>
+                <span>250 м²</span>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">Тип недвижимости</span>
+              <div class="segmented" id="propertyTypeGroup">
+                <button type="button" class="seg-btn is-active" data-value="newbuild">Новостройка (бетон)</button>
+                <button type="button" class="seg-btn" data-value="secondary">Вторичный фонд</button>
+                <button type="button" class="seg-btn" data-value="house">Загородный дом</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">Уровень инженерной проработки</span>
+              <div class="tier-grid" id="tierGroup">
+                <button type="button" class="tier-btn" data-value="rational">
+                  <strong>Rational Comfort</strong>
+                  <span>Выверенная база, эргономика, тишина, идеальная геометрия</span>
+                </button>
+                <button type="button" class="tier-btn is-active" data-value="smart">
+                  <strong>Smart Residence</strong>
+                  <span>Оптимум: умный дом, климат-контроль, скрытые примыкания</span>
+                </button>
+                <button type="button" class="tier-btn" data-value="bespoke">
+                  <strong>Bespoke Engineering</strong>
+                  <span>Максимальная автономность, акустика, кастомные узлы</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">Инженерные модули комфорта</span>
+              <div class="checkbox-list">
+                <label class="check-card">
+                  <input type="checkbox" id="optClimate" checked />
+                  <span>
+                    <strong>Приточная вентиляция и климат-контроль</strong>
+                    <small>Свежий фильтрованный воздух 24/7 без открывания окон и уличного шума</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input type="checkbox" id="optSmartHome" checked />
+                  <span>
+                    <strong>Прагматичный Умный дом (свет + климат + протечки)</strong>
+                    <small>Локальная автоматика с высокой ремонтопригодностью</small>
+                  </span>
+                </label>
+                <label class="check-card">
+                  <input type="checkbox" id="optAcoustic" />
+                  <span>
+                    <strong>Профессиональная акустическая капсула спален</strong>
+                    <small>Каркасная звукоизоляция до -58 дБ для глубокого сна</small>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
+
+          <aside class="calc-result" aria-live="polite">
+            <div class="calc-result-top">
+              <span class="mono-label">ПРЕДВАРИТЕЛЬНАЯ ОЦЕНКА ПРОЕКТА</span>
+              <div class="result-price-block">
+                <span class="result-caption">Ориентировочный бюджет «под ключ» (работы + черновая и инженерная база)</span>
+                <div class="result-main-value" id="calcTotal">6 175 000 ₽</div>
+              </div>
+
+              <div class="savings-highlight">
+                <span class="savings-label">Ваша прямая экономия за счёт рационального подбора решений</span>
+                <div class="savings-value" id="calcSavings">~ 1 950 000 ₽ (24%)</div>
+                <p class="savings-note">
+                  В сравнении с нерациональным премиумом при сохранении ресурса и уровня комфорта.
+                </p>
+              </div>
+            </div>
+
+            <div class="calc-meta-row">
+              <div>
+                <span class="meta-k">Расчётный срок реализации</span>
+                <strong class="meta-v" id="calcTimeline">4.5 месяца</strong>
+              </div>
+              <div>
+                <span class="meta-k">Фиксация сметы</span>
+                <strong class="meta-v">100% до старта</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-brass btn-lg btn-block" id="transferCalcBtn">
+              Перенести расчёт в заявку
+            </button>
+            <p class="calc-disclaimer">
+              Точная смета до рубля формируется после инженерного замера и аудита объекта.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="section section-stone" id="cases">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">05 // ПРАКТИКА РАЦИОНАЛЬНОЙ ЭКОНОМИИ</span>
+          <h2>Реализованные проекты с измеримым ROI</h2>
+          <p class="section-subtitle">
+            Конкретные примеры того, как инженерная оптимизация сохраняет миллионы рублей без компромисса в ощущениях от пространства.
+          </p>
+        </div>
+
+        <div class="cases-grid">
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-area">112 м² • Новостройка</span>
+              <span class="case-saved">Экономия 2 150 000 ₽</span>
+            </div>
+            <h3>Резиденция с тихим климатом и локальным Smart Home</h3>
+            <p class="case-task">
+              <strong>Задача:</strong> Автоматизировать свет, шторы, вентиляцию и защиту от протечек для семьи из четырёх человек без сложного обслуживания.
+            </p>
+            <p class="case-opt">
+              <strong>Оптимизация:</strong> Заменили закрытую европейскую шину с дорогими сенсорными панелями на промышленный локальный контроллер и единую линейку тактильных клавиш.
+            </p>
+            <ul class="case-tags">
+              <li>Шум в спальне 21 дБ</li>
+              <li>Срок 4.8 мес.</li>
+              <li>Отклонение от сметы 0%</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-area">86 м² • Вторичный фонд</span>
+              <span class="case-saved">Экономия 1 480 000 ₽</span>
+            </div>
+            <h3>Эргономичная перепланировка и акустическая капсула</h3>
+            <p class="case-task">
+              <strong>Задача:</strong> Организовать два изолированных рабочих кабинета, просторную кухню-гостиную и мастер-блок в старом жилом фонде.
+            </p>
+            <p class="case-opt">
+              <strong>Оптимизация:</strong> Вместо дорогостоящей сдвижной перегородки с верхним рельсом применили двойной каркас с расчётной звукоизоляцией и теневым профилем по периметру.
+            </p>
+            <ul class="case-tags">
+              <li>Звукоизоляция -57 дБ</li>
+              <li>Скрытые ревизии</li>
+              <li>Срок 4.2 мес.</li>
+            </ul>
+          </article>
+
+          <article class="case-card">
+            <div class="case-top">
+              <span class="case-area">185 м² • Загородный дом</span>
+              <span class="case-saved">Экономия 3 400 000 ₽</span>
+            </div>
+            <h3>Инженерное ядро и мультизональное отопление</h3>
+            <p class="case-task">
+              <strong>Задача:</strong> Обеспечить стабильный микроклимат, независимые контуры тёплых полов и быструю ремонтопригодность всех узлов.
+            </p>
+            <p class="case-opt">
+              <strong>Оптимизация:</strong> Спроектировали компактную коллекторную с разделением зон по этажам и балансировкой вместо избыточной каскадной автоматики на каждое окно.
+            </p>
+            <ul class="case-tags">
+              <li>Снижение расхода тепла на 26%</li>
+              <li>Цифровой паспорт сетей</li>
+              <li>Срок 6.0 мес.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS TIMELINE -->
+    <section class="section section-dark" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono-tag">06 // ПРОЦЕСС РАБОТЫ</span>
+          <h2>5 шагов от эргономического интервью до паспорта объекта</h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="step-num">01</span>
+            <h3>Эргономическое интервью и аудит</h3>
+            <p>Фиксируем образ жизни, привычки, состав семьи, требования к тишине, свету и хранению. Проверяем исходное состояние объекта.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">02</span>
+            <h3>Инженерное проектирование и Smart ROI</h3>
+            <p>Разрабатываем чертежи всех узлов, примыканий, электрики, сантехники и вентиляции с отсечением лишних затрат.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">03</span>
+            <h3>Твёрдая смета и календарный план</h3>
+            <p>Согласовываем фиксированную стоимость и график платежей, привязанный к реальным приёмкам этапов.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">04</span>
+            <h3>Реализация по чек-листам технадзора</h3>
+            <p>Каждый скрытый этап (трассы, гидроизоляция, примыкания) принимается инженером по 140+ контрольным параметрам.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-num">05</span>
+            <h3>Сдача и цифровой паспорт объекта</h3>
+            <p>Передаём полностью готовое пространство с инструкциями сценариев, маркировкой щитов и фотоархивом всех скрытых сетей.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-stone" id="faq">
+      <div class="container faq-layout">
+        <div class="section-head">
+          <span class="mono-tag">07 // ЧАСТЫЕ ВОПРОСЫ</span>
+          <h2>Ответы на ключевые вопросы до старта</h2>
+          <p class="section-subtitle">
+            Прозрачность начинается с прямых ответов о бюджете, технологиях и гарантиях.
+          </p>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>За счёт чего вы экономите 20–35% бюджета по сравнению с премиум-подрядчиками?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-content" hidden>
+              <p>
+                Мы не используем переразмеренные инженерные системы, закрытые люкс-бренды ради строки в смете и неоправданно сложные строительные узлы там, где есть промышленное, долговечное и эстетичное решение. Плюс единый стандарт узлов исключает переделки и простои на объекте.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Означает ли экономичность, что вы используете дешёвые материалы?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-content" hidden>
+              <p>
+                Нет. Мы не экономим на ресурсе труб, кабеле, звукоизоляции, вентиляции и примыканиях — то есть на всём, что отвечает за тишину, безопасность и тактильность. Мы убираем только маркетинговую переплату и избыточную сложность, которые не улучшают жизнь в квартире.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Что произойдёт с Умным домом, если пропадёт интернет или закроется производитель?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-content" hidden>
+              <p>
+                Логика управления светом, климатом и защитой от протечек работает полностью локально на вашей стороне без облака. Используются открытые промышленные протоколы и стандартные комплектующие на DIN-рейку — любой квалифицированный электрик сможет обслужить или заменить модуль.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Может ли смета вырасти в процессе ремонта?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-content" hidden>
+              <p>
+                После утверждения инженерного проекта и технического задания смета фиксируется в договоре. Единственный сценарий изменения цены — если вы сами захотите добавить новые опции или поменять финишные материалы уже в ходе работ.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Какую гарантию и документацию мы получаем при сдаче объекта?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-content" hidden>
+              <p>
+                Вы получаете официальную гарантию по договору, исполнительные схемы всех инженерных коммуникаций, фотофиксацию скрытых работ с привязкой к размерам, расшифровку электрощита и понятный гид по сценариям управления квартирой.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <span class="mono-tag">08 // ОБСУДИТЬ ПРОЕКТ</span>
+          <h2>Получите инженерную оценку и план рационального бюджета</h2>
+          <p class="contact-lead">
+            Разберём ваш объект, покажем типовые узлы вживую и подготовим прозрачный расчёт
+            с фиксацией точек разумной экономии.
+          </p>
+          <div class="contact-guarantees">
+            <div>
+              <strong>Инженерный разбор</strong>
+              <span>Проверим планировку на скрытые ошибки эргономики и коммуникаций</span>
+            </div>
+            <div>
+              <strong>Без навязчивых продаж</strong>
+              <span>Общается ведущий инженер-проектировщик, а не колл-центр</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="lead-form" id="leadForm">
+          <div class="form-row">
+            <label for="leadName">Ваше имя</label>
+            <input type="text" id="leadName" name="name" placeholder="Например, Алексей" required />
+          </div>
+
+          <div class="form-row">
+            <label for="leadContact">Телефон или Telegram (@username)</label>
+            <input type="text" id="leadContact" name="contact" placeholder="+7 (999) 000-00-00 или @alexey" required />
+          </div>
+
+          <div class="form-row">
+            <label for="leadSummary">Параметры из калькулятора (при наличии)</label>
+            <input
+              type="text"
+              id="leadSummary"
+              name="summary"
+              placeholder="Например: 95 м², Новостройка, Smart Residence"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="leadComment">Комментарий по объекту</label>
+            <textarea
+              id="leadComment"
+              name="comment"
+              rows="3"
+              placeholder="ЖК или район, когда планируете старт работ, приоритеты по комфорту"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-brass btn-lg btn-block" id="leadSubmitBtn">
+            Запросить инженерный расчёт
+          </button>
+          <p class="form-status" id="leadStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>РАЦИО // ИНЖЕНЕРИЯ КОМФОРТА</strong>
+        <span>Умные, эргономичные и экономически эффективные ремонты</span>
+      </div>
+      <div class="footer-links">
+        <a href="#artifacts">Миссия и философия</a>
+        <a href="#anatomy">Инженерный стандарт</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#contact">Связаться</a>
+      </div>
+      <div class="footer-copy">
+        <span>© 2026 РАЦИО. Цель — 51% стандарта рационального ремонта.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
