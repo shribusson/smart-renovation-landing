@@ -317,7 +317,7 @@
       const contact = document.getElementById('leadContact').value.trim();
       const rawSummary = document.getElementById('leadSummary').value.trim();
       const comment = document.getElementById('leadComment').value.trim();
-      const variantMatch = document.title.match(/^\[(v\d+)\]/);
+      const variantMatch = document.title.match(/^\[(v\d+|d\d+)\]/);
       const variantPrefix = variantMatch ? `[${variantMatch[1]}]` : '';
       const summary = variantPrefix
         ? `${variantPrefix} ${rawSummary || 'Без калькулятора'}`
