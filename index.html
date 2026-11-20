@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-default-design="d3">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,19 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="/styles.css" />
+  <link id="themeStylesheet" rel="stylesheet" href="/themes/d3.css" />
+  <script>
+    (function () {
+      var d = new URLSearchParams(window.location.search).get('design');
+      if (d === 'base' || d === 'd1' || d === 'd2' || d === 'd3') {
+        document.documentElement.dataset.design = d;
+        var link = document.getElementById('themeStylesheet');
+        if (link) {
+          link.href = '/themes/' + d + '.css';
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="variant-bar" role="navigation" aria-label="Переключатель тестовых вариантов лендинга">
@@ -22,20 +34,21 @@
       <div class="variant-group">
         <span class="variant-bar-label">ТЕКСТЫ:</span>
         <div class="variant-bar-links">
-          <a href="https://v1.meninui.kz" class="variant-link">v1: Стандарт</a>
-          <a href="https://v2.meninui.kz" class="variant-link">v2: Прагматик</a>
-          <a href="https://v3.meninui.kz" class="variant-link">v3: Аудит</a>
-          <a href="https://v4.meninui.kz" class="variant-link">v4: Анти-смог</a>
-          <a href="https://v5.meninui.kz" class="variant-link">v5: Под ключ</a>
-          <a href="https://v6.meninui.kz" class="variant-link">v6: Простыми словами</a>
+          <a href="https://v1.meninui.kz" class="variant-link" data-copy-link="v1">v1: Стандарт</a>
+          <a href="https://v2.meninui.kz" class="variant-link" data-copy-link="v2">v2: Прагматик</a>
+          <a href="https://v3.meninui.kz" class="variant-link" data-copy-link="v3">v3: Аудит</a>
+          <a href="https://v4.meninui.kz" class="variant-link" data-copy-link="v4">v4: Анти-смог</a>
+          <a href="https://v5.meninui.kz" class="variant-link" data-copy-link="v5">v5: Под ключ</a>
+          <a href="https://v6.meninui.kz" class="variant-link" data-copy-link="v6">v6: Простыми словами</a>
         </div>
       </div>
       <div class="variant-group">
         <span class="variant-bar-label">ДИЗАЙН-КОД:</span>
         <div class="variant-bar-links">
-          <a href="https://d1.meninui.kz" class="variant-link">d1: Светлый архитектурный</a>
-          <a href="https://d2.meninui.kz" class="variant-link">d2: Швейцарская сетка</a>
-          <a href="https://d3.meninui.kz" class="variant-link is-current">d3: Тёмное ателье</a>
+          <button type="button" class="variant-link" data-design-btn="base" aria-pressed="false">Базовый</button>
+          <button type="button" class="variant-link" data-design-btn="d1" aria-pressed="false">d1: Светлый архитектурный</button>
+          <button type="button" class="variant-link" data-design-btn="d2" aria-pressed="false">d2: Швейцарская сетка</button>
+          <button type="button" class="variant-link is-current" data-design-btn="d3" aria-pressed="true">d3: Тёмное ателье</button>
         </div>
       </div>
     </div>
@@ -813,6 +826,7 @@
     </div>
   </footer>
 
+  <script src="/theme-switcher.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>
