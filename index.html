@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-default-design="base">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,19 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="/styles.css" />
+  <link id="themeStylesheet" rel="stylesheet" href="/themes/base.css" />
+  <script>
+    (function () {
+      var d = new URLSearchParams(window.location.search).get('design');
+      if (d === 'base' || d === 'd1' || d === 'd2' || d === 'd3') {
+        document.documentElement.dataset.design = d;
+        var link = document.getElementById('themeStylesheet');
+        if (link) {
+          link.href = '/themes/' + d + '.css';
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <div class="variant-bar" role="navigation" aria-label="Переключатель тестовых вариантов лендинга">
@@ -22,20 +34,21 @@
       <div class="variant-group">
         <span class="variant-bar-label">ТЕКСТЫ:</span>
         <div class="variant-bar-links">
-          <a href="https://v1.meninui.kz" class="variant-link">v1: Стандарт</a>
-          <a href="https://v2.meninui.kz" class="variant-link is-current">v2: Прагматик</a>
-          <a href="https://v3.meninui.kz" class="variant-link">v3: Аудит</a>
-          <a href="https://v4.meninui.kz" class="variant-link">v4: Анти-смог</a>
-          <a href="https://v5.meninui.kz" class="variant-link">v5: Под ключ</a>
-          <a href="https://v6.meninui.kz" class="variant-link">v6: Простыми словами</a>
+          <a href="https://v1.meninui.kz" class="variant-link" data-copy-link="v1">v1: Стандарт</a>
+          <a href="https://v2.meninui.kz" class="variant-link is-current" data-copy-link="v2">v2: Прагматик</a>
+          <a href="https://v3.meninui.kz" class="variant-link" data-copy-link="v3">v3: Аудит</a>
+          <a href="https://v4.meninui.kz" class="variant-link" data-copy-link="v4">v4: Анти-смог</a>
+          <a href="https://v5.meninui.kz" class="variant-link" data-copy-link="v5">v5: Под ключ</a>
+          <a href="https://v6.meninui.kz" class="variant-link" data-copy-link="v6">v6: Простыми словами</a>
         </div>
       </div>
       <div class="variant-group">
         <span class="variant-bar-label">ДИЗАЙН-КОД:</span>
         <div class="variant-bar-links">
-          <a href="https://d1.meninui.kz" class="variant-link">d1: Светлый архитектурный</a>
-          <a href="https://d2.meninui.kz" class="variant-link">d2: Швейцарская сетка</a>
-          <a href="https://d3.meninui.kz" class="variant-link">d3: Тёмное ателье</a>
+          <button type="button" class="variant-link is-current" data-design-btn="base" aria-pressed="true">Базовый</button>
+          <button type="button" class="variant-link" data-design-btn="d1" aria-pressed="false">d1: Светлый архитектурный</button>
+          <button type="button" class="variant-link" data-design-btn="d2" aria-pressed="false">d2: Швейцарская сетка</button>
+          <button type="button" class="variant-link" data-design-btn="d3" aria-pressed="false">d3: Тёмное ателье</button>
         </div>
       </div>
     </div>
@@ -126,19 +139,15 @@
             <span class="mono-label">STD // RATIONAL-ENG-2026</span>
             <span class="spec-badge">SPECIFIED</span>
           </div>
-          <div class="blueprint-diagram" aria-hidden="true">
-            <svg viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="10" width="344" height="130" stroke="rgba(244,241,234,0.16)" stroke-dasharray="4 4" />
-              <path d="M24 30H210V92H336" stroke="#C5A065" stroke-width="1.5" />
-              <path d="M24 120H140V60H336" stroke="rgba(244,241,234,0.4)" stroke-width="1.2" />
-              <circle cx="210" cy="92" r="4" fill="#C5A065" />
-              <circle cx="140" cy="60" r="4" fill="#F4F1EA" />
-              <rect x="260" y="26" width="62" height="26" stroke="#C5A065" stroke-width="1" />
-              <text x="270" y="43" fill="#C5A065" font-family="IBM Plex Mono, monospace" font-size="10">0.5 мм</text>
-              <text x="26" y="23" fill="rgba(244,241,234,0.55)" font-family="IBM Plex Mono, monospace" font-size="9">АКУСТИЧЕСКИЙ КОНТУР -58 дБ</text>
-              <text x="150" y="132" fill="rgba(244,241,234,0.55)" font-family="IBM Plex Mono, monospace" font-size="9">SMART ROI +28% ЭФФЕКТИВНОСТИ</text>
-            </svg>
-          </div>
+          <figure class="hero-photo-frame">
+            <img
+              src="/assets/hero-dark.jpg"
+              alt="Спокойный современный интерьер со скрытым освещением и тихой вентиляцией"
+              width="1376"
+              height="768"
+            />
+            <figcaption>ГОТОВЫЙ ИНТЕРЬЕР • ВЕНТИЛЯЦИЯ, ЗВУКОИЗОЛЯЦИЯ И СВЕТ СКРЫТЫ В КОНСТРУКЦИЯХ</figcaption>
+          </figure>
           <div class="metrics-grid">
             <div class="metric-item">
               <span class="metric-value">-20–35%</span>
@@ -822,6 +831,7 @@
     </div>
   </footer>
 
+  <script src="/theme-switcher.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>
