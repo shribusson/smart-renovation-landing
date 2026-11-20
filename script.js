@@ -364,7 +364,18 @@
       const rawSummary = document.getElementById('leadSummary').value.trim();
       const comment = document.getElementById('leadComment').value.trim();
       const variantMatch = document.title.match(/^\[(v\d+|d\d+)\]/);
-      const variantPrefix = variantMatch ? `[${variantMatch[1]}]` : '';
+      const baseCode = variantMatch ? variantMatch[1] : '';
+      const activeDesign = document.documentElement.dataset.design;
+      const defaultDesign = document.documentElement.dataset.defaultDesign || 'base';
+      let variantPrefix = baseCode ? `[${baseCode}]` : '';
+      if (
+        baseCode &&
+        activeDesign &&
+        activeDesign !== baseCode &&
+        !(defaultDesign === 'base' && activeDesign === 'base')
+      ) {
+        variantPrefix = `[${baseCode}|${activeDesign}]`;
+      }
       const summary = variantPrefix
         ? `${variantPrefix} ${rawSummary || 'Без калькулятора'}`
         : rawSummary;
