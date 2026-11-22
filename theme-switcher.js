@@ -12,7 +12,7 @@
       photo: '/assets/hero-light.jpg',
       accent: '#8B5E34',
       fonts:
-        'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Lora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap',
     },
     d2: {
       css: '/themes/d2.css',
