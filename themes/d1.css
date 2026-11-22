@@ -2009,8 +2009,8 @@ input[type='range'] {
   padding: 1.45rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1.15rem;
+  justify-content: flex-start;
+  gap: 0.95rem;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
@@ -2040,12 +2040,62 @@ input[type='range'] {
   color: var(--ink-dark-muted);
 }
 
+.vis-xray-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.68rem;
+}
+
+.vis-xray-kpi {
+  padding: 0.72rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-limestone);
+  border: 1px solid var(--border-light);
+  display: grid;
+  gap: 0.2rem;
+}
+
+.vis-xray-kpi-label {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dark-muted);
+}
+
+.vis-xray-kpi-val {
+  font-size: 0.96rem;
+  font-weight: 700;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.25;
+  color: var(--ink-dark);
+}
+
+.vis-xray-subhead {
+  margin: 0.15rem 0 -0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
 .vis-check-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.68rem;
+  gap: 0.62rem;
+}
+
+.vis-xray-meta {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  line-height: 1.45;
+  color: var(--ink-dark-muted);
 }
 
 .vis-check-list li {

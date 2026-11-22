@@ -6,64 +6,84 @@
 
   const ANATOMY_DATA = {
     climate: {
-      photo: '/assets/vis-air.jpg',
-      alt: 'Спальня с панорамным остеклением, чистым воздухом и скрытым щелевым диффузором в потолке',
-      badge: 'ВОЗДУХ · PM2.5 · 40–55%',
+      photo: '/assets/xray-climate.jpg',
+      alt: 'Разрез узла вентиляции за потолком коридора с плоскими каналами и шумоглушителем',
+      badge: 'РЕНТГЕН · ОВИК',
       title: 'Закрытые окна без духоты, смога и зимней сухости',
       note: 'Каналы идут над шкафами — высота потолка в комнатах сохранена',
       effectNum: '600–800 ppm',
       effectText: 'Свежий воздух и влажность 40–55% в спальне круглый год',
+      kpi1Label: 'ШУМ В КАНАЛЕ',
+      kpi1Val: '≤ 22 дБ(А)',
+      kpi2Label: 'ПОТЕРЯ ВЫСОТЫ',
+      kpi2Val: '0 см в жилых',
       specs: [
         'Очистка притока от смога Алматы и пыльцы',
         'Увлажнение 40–55% в морозы Астаны для детей и паркета',
         'Незаметная узкая решётка в ровном потолке',
         'Смена доступных фильтров за 10 минут 2× в год',
       ],
+      meta: 'Трассировка над шкафами · Фильтр F7 + H13 · Доступный люк 40×40 см',
     },
     acoustics: {
-      photo: '/assets/vis-acoustics.jpg',
-      alt: 'Тихая спальня со звукопоглощающими панелями из ореха и дверью скрытого монтажа',
-      badge: 'ТИШИНА · ≤ 23 ДБ(А)',
+      photo: '/assets/xray-acoustics.jpg',
+      alt: 'Слоистый разрез звукоизоляционной перегородки с виброразвязкой на бетонной плите',
+      badge: 'РЕНТГЕН · АКУСТИКА',
       title: 'Акустическая тишина спальни даже рядом с проспектом',
       note: 'Шумоглушители, плавающая стяжка и развязка перегородок',
       effectNum: '≤ 23 дБ',
       effectText: 'Ночной фон тише шёпота и шелеста листьев',
+      kpi1Label: 'ЗВУКОИЗОЛЯЦИЯ',
+      kpi1Val: 'Rw ≥ 56 дБ',
+      kpi2Label: 'ПОЛ У СОСЕДЕЙ',
+      kpi2Val: 'Развязка 10 мм',
       specs: [
         'Глушители в каналах и низкая скорость потока воздуха',
         'Перегородки с виброразвязкой от пола и перекрытий',
         'Смещённые розетки без сквозных дыр к соседям',
         'Шумоизоляция стояков и герметичные двери',
       ],
+      meta: 'Вибролента по периметру · Минеральная плита 50 кг/м³ · Смещённые подрозетники',
     },
     light: {
-      photo: '/assets/vis-light.jpg',
-      alt: 'Вечерняя гостиная с тёплым отражённым светом без ослепления и естественной цветопередачей',
-      badge: 'ЖИВОЙ СВЕТ · CRI 95+',
+      photo: '/assets/xray-light.jpg',
+      alt: 'Узел безрамочного утопленного светильника и скрытого периметрального засвета стены из травертина',
+      badge: 'РЕНТГЕН · ОПТИКА',
       title: 'Три слоя света без бликов, мерцания и серых оттенков',
       note: 'Автоматический переход от дневного оттенка к вечернему',
       effectNum: 'CRI 95+',
       effectText: 'Естественные оттенки дерева и кожи, пульсация < 1%',
+      kpi1Label: 'ДИАПАЗОН СВЕТА',
+      kpi1Val: '2700–4000 K',
+      kpi2Label: 'ЗАЩИТА ОТ БЛИКА',
+      kpi2Val: 'UGR < 16',
       specs: [
         'Общий мягкий фон + акцент на столе + ночная дорожка',
         'Глубокая утопленная оптика — не бьёт в глаза с дивана',
         'Промышленные блоки питания в сервисном шкафу',
         'Оптимизация числа лишних светильников на 25–30%',
       ],
+      meta: 'Гипсовый бесщелевой корпус · Блоки в щите · Пульсация < 1% во всём диапазоне',
     },
     shield: {
       photo: '/assets/vis-cabinet.jpg',
       alt: 'Единый сервисный шкаф с коллекторами воды и маркированным модульным электрощитом',
-      badge: 'ЩИТ И ВОДА · 10+ ЛЕТ',
+      badge: 'РЕНТГЕН · УЗЕЛ ВВОДА',
       title: 'Всё обслуживание — за одной дверцей аккуратного шкафа',
       note: 'Открытые компоненты с аппаратным резервом клавиш',
       effectNum: '2 секунды',
       effectText: 'Мгновенное перекрытие воды при первых каплях протечки',
+      kpi1Label: 'ОПРЕССОВКА',
+      kpi1Val: '10 бар / 24 ч',
+      kpi2Label: 'РЕЗЕРВ КЛАВИШ',
+      kpi2Val: '100% без облака',
       specs: [
         'Открытый контроллер в щите — без привязки к облаку',
         'Обычные настенные клавиши работают даже без сети',
         'Опрессовка труб 10 бар на 24 часа до начала отделки',
         'Техпаспорт квартиры, фото трасс и маркировка линий',
       ],
+      meta: 'Сервоприводы Neptun / Gidrolock · Коллектор Rehau · Исполнительный журнал',
     },
   };
 
@@ -93,7 +113,12 @@
   const noteEl = document.getElementById('anatomyNote');
   const effectNumEl = document.getElementById('anatomyEffectNum');
   const effectTextEl = document.getElementById('anatomyEffectText');
+  const kpi1LabelEl = document.getElementById('anatomyKpi1Label');
+  const kpi1ValEl = document.getElementById('anatomyKpi1Val');
+  const kpi2LabelEl = document.getElementById('anatomyKpi2Label');
+  const kpi2ValEl = document.getElementById('anatomyKpi2Val');
   const specsEl = document.getElementById('anatomySpecs');
+  const metaEl = document.getElementById('anatomyMeta');
 
   function renderAnatomy(key) {
     const data = ANATOMY_DATA[key];
@@ -110,6 +135,10 @@
     if (noteEl) noteEl.textContent = data.note;
     if (effectNumEl) effectNumEl.textContent = data.effectNum;
     if (effectTextEl) effectTextEl.textContent = data.effectText;
+    if (kpi1LabelEl) kpi1LabelEl.textContent = data.kpi1Label;
+    if (kpi1ValEl) kpi1ValEl.textContent = data.kpi1Val;
+    if (kpi2LabelEl) kpi2LabelEl.textContent = data.kpi2Label;
+    if (kpi2ValEl) kpi2ValEl.textContent = data.kpi2Val;
 
     if (specsEl) {
       specsEl.innerHTML = '';
@@ -122,6 +151,7 @@
         specsEl.appendChild(li);
       });
     }
+    if (metaEl) metaEl.textContent = data.meta;
   }
 
   tabs.forEach((tab) => {
