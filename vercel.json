@@ -1,12 +1,5 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://v2.meninui.kz/$1",
-      "permanent": false
-    }
-  ]
+  "trailingSlash": false
 }
